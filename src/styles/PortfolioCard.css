@@ -1,0 +1,287 @@
+.portfolio-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-container.light-mode {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.portfolio-container.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e0e0e0;
+}
+
+.portfolio-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .portfolio-card {
+  background: #2d2d44;
+  color: #e0e0e0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Profile Section */
+.profile-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-image-wrapper {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .profile-image {
+  border-color: #764ba2;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.cycle-photo-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 50%;
+  transform: translateX(50%);
+  background: #667eea;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dark-mode .cycle-photo-btn {
+  background: #764ba2;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+}
+
+.cycle-photo-btn:hover {
+  transform: translateX(50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+}
+
+.cycle-photo-btn:active {
+  transform: translateX(50%) scale(0.95);
+}
+
+/* Profile Info */
+.profile-info {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+.dark-mode .profile-info {
+  border-bottom-color: #444;
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .profile-name {
+  color: #fff;
+}
+
+.profile-title {
+  font-size: 18px;
+  color: #667eea;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .profile-title {
+  color: #a78bfa;
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .profile-bio {
+  color: #b0b0b0;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 30px;
+}
+
+.skills-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .skills-section h2 {
+  color: #fff;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.like-btn,
+.contact-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like-btn {
+  background: #667eea;
+  color: white;
+}
+
+.dark-mode .like-btn {
+  background: #764ba2;
+}
+
+.like-btn:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.dark-mode .like-btn:hover {
+  background: #6a3fa8;
+}
+
+.like-btn:active {
+  transform: translateY(0);
+}
+
+.contact-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.dark-mode .contact-btn {
+  background: #444;
+  color: #e0e0e0;
+}
+
+.contact-btn:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .contact-btn:hover {
+  background: #555;
+}
+
+.contact-btn:active {
+  transform: translateY(0);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .theme-toggle-btn {
+  background: #444;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  background: #e0e0e0;
+}
+
+.dark-mode .theme-toggle-btn:hover {
+  background: #555;
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .portfolio-card {
+    padding: 25px;
+  }
+
+  .profile-name {
+    font-size: 24px;
+  }
+
+  .profile-title {
+    font-size: 16px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .like-btn,
+  .contact-btn {
+    min-width: unset;
+  }
+}
